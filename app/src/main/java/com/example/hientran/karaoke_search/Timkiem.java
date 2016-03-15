@@ -131,6 +131,7 @@ public class Timkiem extends Activity implements SearchView.OnQueryTextListener 
 
         return super.onOptionsItemSelected(item);
     }
+    // cập nhật thêm tìm kiếm tên ca sĩ
     @Override
     public boolean onQueryTextChange(String chuoi) {
 
