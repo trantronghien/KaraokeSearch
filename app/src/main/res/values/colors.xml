@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#04971c</color>
     <color name="hong">#f7216a</color>
     <color name="color_primary">#009F9F</color>
     <color name="color_primary_dark">#00796B</color>
@@ -17,4 +17,12 @@
     <color name="black">@android:color/black</color>
     <color name="teal_200">#80CBC4</color>
     <color name="grey">#E0E0E0</color>
+    <color name="Tenbaihat">#0616ed</color>
+    <color name="LoiBaiHat">#0b0d0d</color>
+    <color name="Yesloww">#f5f109</color>
+    <color name="Red">#fa0511</color>
+    <color name="XANHLA">#02890b</color>
+    <color name="XANHDUONG">#031fd6</color>
+    <color name="XamLam">#92f1ec</color>
+    <color name="mabaihat">#f2030b</color>
 </resources>

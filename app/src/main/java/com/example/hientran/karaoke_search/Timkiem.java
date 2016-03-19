@@ -135,7 +135,7 @@ public class Timkiem extends Activity implements SearchView.OnQueryTextListener 
     @Override
     public boolean onQueryTextChange(String chuoi) {
 
-        list = db.danhsachbaihattheoma(chuoi.toLowerCase().toString());
+        list = db.danhsachbaihattheoma(chuoi.toLowerCase().toString()); //
         a = chuoi;
         setAdapterListView(list);
         adapter.notifyDataSetChanged();

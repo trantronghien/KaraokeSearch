@@ -4,6 +4,7 @@ package com.example.hientran.karaoke_search;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpCookie;
 
 //
 //import org.apache.http.HttpEntity;
@@ -40,6 +41,7 @@ public class Tab_Update extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+
 		runOnUiThread(new Runnable() {
 
 			@Override
@@ -58,7 +60,7 @@ public class Tab_Update extends Activity {
 		protected void onPreExecute() {
 			// TODO Auto-generated method stub
 			super.onPreExecute();
-		    pd= ProgressDialog.show(Tab_Update.this,"Thông Báo","Đang Tải CSDL...",true);
+		    pd = ProgressDialog.show(Tab_Update.this,"Thông Báo","Đang Tải CSDL...",true);
 		}
 		@Override
 		protected String doInBackground(String... params) {
@@ -81,7 +83,7 @@ public class Tab_Update extends Activity {
 			else
 			{
 				try {
-					JSONObject root=new JSONObject(s);
+					JSONObject root =new JSONObject(s);
 					JSONArray mang = root.getJSONArray("BaiHat");
 					for (int i=0; i<mang.length();i++){
 

@@ -48,10 +48,10 @@ public class Song extends Activity implements OnScrollListener {
         spin = (Spinner) findViewById(R.id.spinner1);
         spin1 = (Spinner) findViewById(R.id.spinner2);
         adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arr);
-        adapter1.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        adapter1.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);  //
 
         adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arr2);
-        adapter2.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        adapter2.setDropDownViewResource(android.R.layout.simple_list_item_activated_1);
 
         spin.setAdapter(adapter1);
         spin1.setAdapter(adapter2);

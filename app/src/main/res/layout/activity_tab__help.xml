@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_alignParentTop="true"
+        android:src="@drawable/gioithieu"
         android:layout_alignRight="@+id/help"
         android:layout_alignEnd="@+id/help" />
 </RelativeLayout>
