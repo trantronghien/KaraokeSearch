@@ -105,13 +105,16 @@ public class Tab_Update extends Activity {
                             //Toast.makeText(getApplicationContext() , s ,Toast.LENGTH_SHORT).show();
                             helper = new DatabaseHelper(getBaseContext());
                             helper.openDatabase();
-                            try{
-                                helper.insert(id, name, sname, sabbr, smanufacture, slang, slyric, smeta, favorite);
-                                Log.d("ket noi", "ket noi insert thanh cong");
-                            }catch (NullPointerException e){
-                                Log.d("ket noi" , "ket noi insert khong thanh cong");
-                            }
-
+                            boolean check;
+                            //try{
+                                check = helper.insert(id, name, sname, sabbr, smanufacture, slang, slyric, smeta, favorite);
+                                if(check == true) {
+                                    Log.d("ket noi", "ket noi insert thanh cong");
+                                }
+                           // }catch (NullPointerException e){}
+                            else{
+                                    Log.d("ket noi" , "ket noi insert khong thanh cong");
+                                }
                         }
                         helper.close();
                         Toast.makeText(getApplicationContext(), "Bạn đã Cập Nhật Thành Công", Toast.LENGTH_LONG).show();

@@ -50,13 +50,14 @@ public class Capnhat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_capnhat);
 
-        ConnectivityManager manager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
-        NetworkInfo info = manager.getActiveNetworkInfo();
-        if(info != null && info.isConnected()){
-            Toast.makeText(getApplicationContext(), "Netwwork is Available", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(getApplicationContext() , "Netwwork is not Available" , Toast.LENGTH_SHORT).show();
-        }
+//        ConnectivityManager manager = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
+//        NetworkInfo info = manager.getActiveNetworkInfo();
+//        if(info != null && info.isConnected()){
+//            Toast.makeText(getApplicationContext(), "Netwwork is Available", Toast.LENGTH_SHORT).show();
+//        } else {
+//            Toast.makeText(getApplicationContext() , "Netwwork is not Available" , Toast.LENGTH_SHORT).show();
+//        }
+
 
         btnupdate=(Button)findViewById(R.id.buttonupdate);
         btnhelp = (Button)findViewById(R.id.buttonhelp);
@@ -64,6 +65,8 @@ public class Capnhat extends AppCompatActivity {
         btnupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Intent i = new Intent(Capnhat.this,Tab_Update.class);
                 startActivity(i);
             }

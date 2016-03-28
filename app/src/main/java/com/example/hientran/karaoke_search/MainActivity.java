@@ -21,6 +21,7 @@ public class MainActivity extends TabActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);   // cố định màn hình nằm ngang
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);    // khóa xoay ngang màn hình
         db = new SQLDatabaseSource(this);
