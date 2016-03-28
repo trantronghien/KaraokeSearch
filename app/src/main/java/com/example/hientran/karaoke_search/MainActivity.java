@@ -1,5 +1,6 @@
 package com.example.hientran.karaoke_search;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,7 +21,8 @@ public class MainActivity extends TabActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);   // cố định màn hình nằm ngang
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);    // khóa xoay ngang màn hình
         db = new SQLDatabaseSource(this);
 
         TabHost tabHost = getTabHost();

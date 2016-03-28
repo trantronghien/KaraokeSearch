@@ -3,6 +3,7 @@ package com.example.hientran.karaoke_search;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -40,6 +41,8 @@ public class Timkiem extends Activity implements SearchView.OnQueryTextListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timkiem);
+
+
         lvhienthi = (ListView)findViewById(R.id.lvhienthi);
 
         db=new SQLDatabaseSource(this);
@@ -142,20 +145,8 @@ public class Timkiem extends Activity implements SearchView.OnQueryTextListener 
         return true;
     }
 
-
-/* (non-Javadoc)
-* @see android.app.Activity#onResume()
-*/
-
-/* (non-Javadoc)
-* @see android.app.Activity#onPause()
-*/
-
     @Override
     public boolean onQueryTextSubmit(String chuoi) {
-        // TODO Auto-generated method stub
-
-
         return false;
     }
 

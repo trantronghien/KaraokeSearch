@@ -27,7 +27,7 @@ public class customtable2 extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.custom_layout_tablebox);
 		// this.getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -60,7 +60,7 @@ public class customtable2 extends Activity {
 		chk.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				// TODO Auto-generated method stub
+
 				if (isChecked) {
 					newvalue = 1;
 					helper = new DatabaseHelper(getBaseContext());
@@ -78,7 +78,6 @@ public class customtable2 extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
 		return super.onCreateOptionsMenu(menu);
 
 	}
@@ -86,7 +85,7 @@ public class customtable2 extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
+
 		if (item.getItemId() == android.R.id.home) {
 			this.finish();
 		}
@@ -95,7 +94,7 @@ public class customtable2 extends Activity {
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
+
 		super.onResume();
 		if (fav1 == 1) {
 			chk.setChecked(true);
@@ -106,7 +105,7 @@ public class customtable2 extends Activity {
 
 	@Override
 	protected void onRestart() {
-		// TODO Auto-generated method stub
+
 		super.onRestart();
 	}
 }

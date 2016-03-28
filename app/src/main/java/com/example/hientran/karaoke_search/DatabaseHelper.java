@@ -6,6 +6,7 @@ import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -30,31 +31,34 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
     public static final String SONG_SOURCE = "smeta";
     public static final String SONG_FAVORITE = "favorite";
 
-    /*
-    public static final String SONG_ID = "_id";
-    public static final String SONG_NAME = "sname";
-    public static final String SONG_NAMECLEAR= "snameclean";
-    public static final String SONG_ABBR = "sabbr";
-    public static final String SONG_MANUFACTURE = "smanufacture";
-    public static final String SONG_LANGUAGE= "language";
-    public static final String SONG_LYRIC = "slyric";
-    public static final String SONG_META = "smeta";
-    public static final String SONG_FAVORITE = "favorite";
-
-    */
-
 
     private static String DB_PATH = "/data/data/com.example.hientran.karaoke_search/databases/";
     private static String DB_PATH1 = "/data/data/com.example.hientran.karaoke_search/";
-    //
     Context context ;
     String duongdanDatabase = "";
     DatabaseHelper DBHelper;     // sử dụng update
-    //String duongdanDatabase2 = "";
+
+
+
+
+//    public long insert1(String a , String b , String c , String d , String i ,String e, String f, String g, String h){
+//        ContentValues values = new ContentValues();
+//        values.put(SONG_ID, a);
+//        values.put(SONG_TITLE, b);
+//        values.put(SONG_TITLE_SIMPLE, c);
+//        values.put(SONG_TITLE_MINI, d);
+//        values.put(SONG_MANU, i);
+//        values.put(SONG_LANG, e);
+//        values.put(SONG_LYRIC, f);
+//        values.put(SONG_SOURCE, g);
+//        values.put(SONG_FAVORITE, h);
+//        SQLiteDatabase db = DBHelper.getWritableDatabase();
+//
+//        return db.insert(TABLE_SONG, null, values);
+//    }
 
     //insert
     public long insert(int a , String b , String c , String d , int i ,String e, String f, String g, int h){
-
         ContentValues values = new ContentValues();
         values.put(SONG_ID, a);
         values.put(SONG_TITLE, b);
@@ -65,10 +69,12 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
         values.put(SONG_LYRIC, f);
         values.put(SONG_SOURCE, g);
         values.put(SONG_FAVORITE, h);
-        SQLiteDatabase db = DBHelper.getWritableDatabase();
-        return db.insert(TABLE_SONG, null, values);
 
+        SQLiteDatabase db = DBHelper.getWritableDatabase();
+
+        return db.insert(TABLE_SONG, null, values);
     }
+
     // phần update
     public int update(String _id, int name) {
         ContentValues args = new ContentValues();
@@ -79,6 +85,7 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
     }
 
     // đường dẫn data/data/package của mình
+
     public DatabaseHelper(Context context) {
         super(context, DATASE_NAME, null, 1);
         this.context = context;
