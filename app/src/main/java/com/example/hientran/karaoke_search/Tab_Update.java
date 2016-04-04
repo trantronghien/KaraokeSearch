@@ -47,7 +47,6 @@ public class Tab_Update extends Activity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                // http://tinyurl.com/takiakun2
                 //http://tangchi83.16mb.com/JSON/karaoke.json
                 new ReadJson().execute("http://tangchi83.16mb.com/JSON/karaoke.json");
 

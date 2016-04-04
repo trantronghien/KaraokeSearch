@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Karaoke_Search</string>
+    <string name="app_name">Karaoke Search</string>
     <string name="action_settings">Settings</string>
     <string name="textupdate">Bạn Nhấn Để Cập Nhập Vol Mới </string>
     <string name="text_help">Bạn có thể Tìm kiếm bằng chữ không dấu , chữ cái đầu của bài hát  </string>
     <style name="Tab">
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColor">#e7a3a3</item>
         <item name="android:gravity">center</item>
 
         <item name="android:textStyle">normal</item>

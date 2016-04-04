@@ -2,6 +2,7 @@ package com.example.hientran.karaoke_search;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
@@ -17,7 +18,7 @@ import android.widget.AbsListView.OnScrollListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Song extends Activity implements OnScrollListener {
+public class Song extends AppCompatActivity implements OnScrollListener {
     SQLDatabaseSource db;
     List<SongQuery> list;
 

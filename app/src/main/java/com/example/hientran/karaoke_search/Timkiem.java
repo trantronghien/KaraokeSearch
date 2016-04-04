@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -163,4 +164,18 @@ public class Timkiem extends Activity implements SearchView.OnQueryTextListener 
             e.printStackTrace();
         }
     }
+
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        int dem = 0;
+//        if(keyCode == KeyEvent.KEYCODE_BACK){
+//            if(dem == 2){
+//                System.exit(0);  // thoát
+//            }
+//            Toast.makeText(Timkiem.this, " Nhấn back lần nữa để thoát ", Toast.LENGTH_SHORT).show();
+//            dem++;
+//
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 }

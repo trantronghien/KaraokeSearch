@@ -1,47 +1,19 @@
 package com.example.hientran.karaoke_search;
 
-import android.app.ProgressDialog;
+
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 
-import java.util.ArrayList;
 
 public class Capnhat extends AppCompatActivity {
 
-    DatabaseHelper helper;
-    SQLiteDatabase db;
     Button btnupdate , btnhelp;
-    String name,sname,sabbr,slang,slyric,smeta;
-    int id;
-    int favorite;
-    TextView tv1,tv2,tv3,tv4;
-    JSONArray mang;
-    ArrayList<String> mid;
-    ArrayList<String> mname ;
-    ArrayList<String> msname;
-    ArrayList<String> msabbr ;
-    ArrayList<String> mslang ;
-    ArrayList<String> mslyric;
-    ArrayList<String> msmeta ;
-    ArrayList<String> mfavorite;
-    int mang1=2;
-    JSONObject user;
-    String a1;
-    ProgressDialog pd;
-    ImageView imgview;
+
 
 
     @Override
@@ -68,6 +40,7 @@ public class Capnhat extends AppCompatActivity {
 
 
                 Intent i = new Intent(Capnhat.this,Tab_Update.class);
+                //i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
             }
         });
@@ -75,14 +48,22 @@ public class Capnhat extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Capnhat.this , Tab_Help.class);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
         });
     }
+
+    // bắt phím back
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         return super.onCreateOptionsMenu(menu);
     }
+
+
 }

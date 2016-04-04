@@ -39,25 +39,8 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
     DatabaseHelper DBHelper;     // sử dụng update
 
 
+    //insert   DBHelper=new DatabaseHelper(context); //SQLiteDatabase db =DBHelper.getWritableDatabase();
 
-
-//    public long insert1(String a , String b , String c , String d , String i ,String e, String f, String g, String h){
-//        ContentValues values = new ContentValues();
-//        values.put(SONG_ID, a);
-//        values.put(SONG_TITLE, b);
-//        values.put(SONG_TITLE_SIMPLE, c);
-//        values.put(SONG_TITLE_MINI, d);
-//        values.put(SONG_MANU, i);
-//        values.put(SONG_LANG, e);
-//        values.put(SONG_LYRIC, f);
-//        values.put(SONG_SOURCE, g);
-//        values.put(SONG_FAVORITE, h);
-//        SQLiteDatabase db = DBHelper.getWritableDatabase();
-//
-//        return db.insert(TABLE_SONG, null, values);
-//    }
-
-    //insert
     public boolean insert(int a , String b , String c , String d , int i ,String e, String f, String g, int h){
         ContentValues values = new ContentValues();
         SQLiteDatabase database = this.getWritableDatabase();
@@ -80,6 +63,7 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
     }
 
     // phần update
+
     public int update(String _id, int name) {
         ContentValues args = new ContentValues();
         args.put(SONG_FAVORITE, name);
