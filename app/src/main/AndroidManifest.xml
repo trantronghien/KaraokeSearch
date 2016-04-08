@@ -14,8 +14,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +24,6 @@
         <activity
             android:name=".Timkiem"
             android:label="@string/app_name"
-
             android:windowSoftInputMode="adjustPan|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -65,17 +63,13 @@
 
         <!-- Photos Activity -->
         <activity
-
             android:name=".YeuThich"
             android:screenOrientation="portrait" />
         <!-- Update Activity -->
         <activity
             android:name=".Capnhat"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".Tab_Help">
-            
-        </activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".Tab_Help"></activity>
     </application>
 
 </manifest>
