@@ -40,6 +40,7 @@ public class Tab_Update extends Activity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -65,10 +66,8 @@ public class Tab_Update extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-
             String chuoi1 = getXmlFromUrl(params[0]);
             return chuoi1;
-
         }
 
         @Override
@@ -118,6 +117,7 @@ public class Tab_Update extends Activity {
                         helper.close();
                         Toast.makeText(getApplicationContext(), "Bạn đã Cập Nhật Thành Công", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(Tab_Update.this, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
                     } catch (JSONException e) {
                         Log.d("Json", "đọc Json lỗi");

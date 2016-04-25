@@ -32,9 +32,7 @@ public class MainActivity extends TabActivity  {
         timkiem.setIndicator("Tìm Kiếm");
         Intent timkiem_Intent = new Intent(MainActivity.this, Timkiem.class);
         timkiem.setContent(timkiem_Intent);
-
-
-
+        
         //=========== = Tab Song = ============//
         TabSpec song = tabHost.newTabSpec("Tab song chứa list view song");
         song.setIndicator("Bài Hát");
@@ -63,8 +61,6 @@ public class MainActivity extends TabActivity  {
         tabHost.addTab(capnhat);
 
     }
-
-
 
 
     @Override

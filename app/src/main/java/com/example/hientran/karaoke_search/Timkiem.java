@@ -43,7 +43,6 @@ public class Timkiem extends Activity implements SearchView.OnQueryTextListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timkiem);
 
-
         lvhienthi = (ListView)findViewById(R.id.lvhienthi);
 
         db=new SQLDatabaseSource(this);
