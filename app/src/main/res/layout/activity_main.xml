@@ -1,33 +1,37 @@
-<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-
-    android:id="@android:id/tabhost"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    >
 
     <RelativeLayout
-        android:id="@+id/topParent"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content_frame">
 
-        <FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tabs_main" />
 
-        <LinearLayout
-
-            android:layout_width="fill_parent"
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs_main"
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:orientation="vertical">
-
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="@color/white"/>
-        </LinearLayout>
+            app:tabTextColor="@color/tab_unselected_text_color"
+            app:tabSelectedTextColor="@color/tab_selected_text_color"
+            android:background="@drawable/tab_background"
+            android:minHeight="?attr/actionBarSize"/>
     </RelativeLayout>
-</TabHost><!--trong phần TabHost có 2 thành phần là Tabwidget là chức các thanh tab
-      và phần FrameLayout là phần chức nội dung cho mỗi tab -->
+
+
+
+</LinearLayout>
