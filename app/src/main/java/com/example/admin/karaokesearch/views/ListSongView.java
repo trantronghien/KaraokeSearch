@@ -1,21 +1,18 @@
 package com.example.admin.karaokesearch.views;
 
-import com.example.admin.karaokesearch.models.Entities.SVol;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by admin on 3/10/2017.
  */
 
-public interface ListSongView <T> {
-    void reload(List<T> listReload);
+public interface ListSongView <T> extends BaseAbstractView {
+    void reloadOnLoadMore(List<T> listReload);
 
     void showNoData();
 
-    void showError();
+    void showError(String ErrorContent);
 
     // spinner = button
-    void loadDataForRequestFromSpinner(List<T> listSong);
+    void loadDataFromRequestSpinner(List<T> listSong);
 }

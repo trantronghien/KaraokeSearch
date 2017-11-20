@@ -16,12 +16,12 @@
         <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
             android:id="@+id/scroll"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:fillViewport="true">
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@android:color/white"
                 android:orientation="vertical">
 
@@ -208,15 +208,15 @@
                         android:layout_marginLeft="10.0dip"
                         android:layout_marginRight="10.0dip"
                         android:background="#80818c8e" />
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/list_suggest_song"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingLeft="10.0dip"
-                        android:paddingRight="10.0dip" />
                 </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_suggest_song"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip" />
             </LinearLayout>
         </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
 

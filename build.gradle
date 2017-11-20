@@ -25,6 +25,9 @@ if (JavaVersion.current().isJava8Compatible()) {
         }
         repositories {
             maven { url "https://jitpack.io" }
+            maven {
+                url  "http://dl.bintray.com/nuptboyzhb/maven"
+            }
         }
     }
 }

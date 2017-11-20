@@ -24,7 +24,7 @@
             app:layout_collapseMode="parallax"
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap">
 
-            <EditText
+            <com.example.admin.karaokesearch.views.ui.EditTextActionSearch
                 android:id="@+id/edit_search"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -37,6 +37,8 @@
                 android:textColorHint="@color/colorGray"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
                 android:textColor="@color/black_text"
                 />
 
@@ -68,12 +70,60 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:clickable="true"
-        android:focusableInTouchMode="true"
-        android:id="@+id/recycler_search"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/group_filter_search_fragment"
+            layout="@layout/layout_tab_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
 
-    </android.support.v7.widget.RecyclerView>
+        <RelativeLayout
+            android:id="@+id/layout_content_search_fragment"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_below="@+id/group_filter_search_fragment">
+            <TextView
+                android:id="@+id/txt_help_search_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/search_help" />
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/proccessbar_search"
+                    style="@style/SpinKitView.Circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txt_help_search_fragment"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    app:SpinKit_Color="@color/color_processbar_search" />
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/proccessbar_search">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:layout_gravity="center"
+                    android:focusableInTouchMode="true">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
 </LinearLayout>

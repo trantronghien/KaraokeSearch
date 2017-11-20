@@ -1,10 +1,14 @@
 package com.example.admin.karaokesearch.presenter;
 
-
-import com.example.admin.karaokesearch.models.Entities.SongArirang;
-import com.example.admin.karaokesearch.models.ISongArirangHelperModel;
-import com.example.admin.karaokesearch.models.SongArirangHelper;
-import com.example.admin.karaokesearch.views.DetaiActivitylView;
+import com.example.admin.karaokesearch.R;
+import com.example.admin.karaokesearch.manager.BaseHelperManager;
+import com.example.admin.karaokesearch.manager.SongArirangManager;
+import com.example.admin.karaokesearch.models.SongArirang;
+import com.example.admin.karaokesearch.models.SongTable;
+import com.example.admin.karaokesearch.util.StringUtils;
+import com.example.admin.karaokesearch.util.UtilHelper;
+import com.example.admin.karaokesearch.views.BaseAbstractView;
+import com.example.admin.karaokesearch.views.DetailActivitylView;
 import com.example.admin.karaokesearch.views.ListSongView;
 
 import java.util.ArrayList;
@@ -14,79 +18,56 @@ import java.util.List;
  * Created by admin on 3/10/2017.
  */
 
-public class SongArirangPresenter implements ISongPresenter {
-    private ListSongView view;
-    private ISongArirangHelperModel model;
-    private DetaiActivitylView detaiView;
+public class SongArirangPresenter extends BaseSongPresenter {
 
-
-    public SongArirangPresenter(ListSongView view, SongArirangHelper model) {
-        this.view = view;
-        this.model = model;
+    public SongArirangPresenter(BaseAbstractView view,BaseHelperManager manager) {
+        super(view , manager);
     }
 
-    public SongArirangPresenter(SongArirangHelper model) {
-        this.model = model;
-    }
-
-    public SongArirangPresenter(ListSongView view) {
-        this.view = view;
-    }
-
-    public SongArirangPresenter(DetaiActivitylView view) {
-        this.detaiView = view;
-    }
-
+    /**
+     *
+     * @param charSequence
+     */
     @Override
-    public void queryData(CharSequence charSequence) {
+    public void queryData(final CharSequence charSequence) {
+        super.queryData(charSequence);
+        String search = StringUtils.trimSpace(charSequence.toString());
+        new TaskSearch<SongArirang>(search) {
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                searchView.onSearching();
+            }
 
-    }
+            @Override
+            protected List<SongArirang> doInBackground(String... params) {
+                List<SongArirang> listResuft;
+                if (params[0].isEmpty()) return null;
+                if (StringUtils.countWords(params[0]) >= StringUtils.SIXWORD){
+                    //tên bài hát
+                    listResuft = manager.searchFollowSongName(params[0] , QueryLanguage);
+                    // lơi bài hát
+                    listResuft.addAll(manager.searchFollowLyrics(params[0] , QueryLanguage));
+                    return listResuft;
+                }else {
+                    listResuft = manager.searchFollowSongNameAcronym(params[0] , QueryLanguage);
+                    listResuft.addAll(manager.searchFollowSongName(params[0], QueryLanguage));
+                    listResuft.addAll(manager.searchFollowAuthor(params[0], QueryLanguage));
+                }
+                return listResuft;
+            }
 
-    @Override
-    public void getSongList(int limit, int idFisrt, String vol, String alphabet, String language) {
-        List list;
-        if (model == null) {
-            model = new SongArirangHelper();
-            list = model.getSongArirangList(limit, idFisrt, vol, alphabet, language);
-            view.loadDataForRequestFromSpinner(list);
-        } else {
-            view.loadDataForRequestFromSpinner(model.getSongArirangList(limit, idFisrt, vol, alphabet, language));
-        }
-    }
+            @Override
+            protected void onPostExecute(List<SongArirang> list) {
+                super.onPostExecute(list);
+                searchView.onSearchFinished(list);
+            }
 
-    @Override
-    public void getSongListWhenReload(int limit, int idFisrt, String vol, String alphabet ,String language) {
-        if (model == null) {
-            model = new SongArirangHelper();
-            view.reload(model.getSongArirangList(limit, idFisrt, vol, alphabet ,language));
-        } else {
-            view.reload(model.getSongArirangList(limit, idFisrt, vol ,alphabet,language));
-        }
-    }
-
-    @Override
-    public void getSongListFollowAuthor(String authorName, String lang) {
-        // StringUtils.removeAccent(String input) loại bỏ dấu
-        if (model == null) {
-            model = new SongArirangHelper();
-            List list = model.querryFollowAuthor(authorName, lang);
-            detaiView.loadDataFollowAuthor((ArrayList) list);
-        }
-    }
-
-    @Override
-    public void updateFavorite(long id, int favorite) {
-        SongArirang songArirang = new SongArirang();
-        songArirang.setFAVORITE(favorite);
-        if (model == null) {
-            model = new SongArirangHelper();
-            model.updateFavorite(id, favorite);
-//            detaiView.isUpdatedByCheckBox(true);
-//            view.isUpdatedByCheckBox(true);
-        } else {
-            model.updateFavorite(id, favorite);
-//            detaiView.isUpdatedByCheckBox(true);
-//            view.isUpdatedByCheckBox(true);
-        }
+            @Override
+            protected void onCancelled() {
+                super.onCancelled();
+                searchView.onSearchFailed(UtilHelper.getStringRes(R.string.error_search_E100));
+            }
+        };
     }
 }

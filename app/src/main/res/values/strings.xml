@@ -23,4 +23,22 @@
     <!--Welcome Activity-->
     <string name="process_copy_database">Xin chờ khởi tạo cho lần chạy đầu tiên ...</string>
 
+
+    <string name="table_song_arirang">Arirang</string>
+    <string name="table_song_music">Music Core</string>
+    <string name="table_song_california">California</string>
+    <string name="table_song_vietktv">VietKTV</string>
+    <string name="search_help">Bạn muốn tìm kiếm bài hát một cách nhanh chóng và hiệu quả  bạn chỉ cần search với từ khóa viết tắt,
+        hoặc tên ca sĩ viết tắt, hay bài hát viết tắt ...
+    </string>
+    <string name="title_tab_one">Tra mã</string>
+    <string name="title_tab_two">Danh mục</string>
+    <string name="title_tab_three">Yêu thích</string>
+    <string name="title_tab_four">Cập nhật</string>
+    <string name="title_tab_five">Tìm kiếm online</string>
+    <string name="error_search_E100">đã có lỗi xảy ra trong quá trình tìm kiếm, hay liên hệ với QC</string>
+    <string name="search_result_no_data">Không tìm thấy dữ liệu nào phù hợp</string>
+    <string name="title_footer_swipe_refresh">Đợi xíu nhé ...</string>
+    <string name="no_input">Bạn vẫn chưa nhập gì</string>
+
 </resources>

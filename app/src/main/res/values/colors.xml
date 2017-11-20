@@ -10,8 +10,12 @@
 
     <color name="tab_border">#a7a7aa</color>
     <color name="tab_background">#f6f6f7</color>
-    <color name="tab_unselected_text_color">#04971a</color>
+
     <color name="tab_selected_text_color">#f54e06</color>
+    <color name="tab_selected_color">#f54e06</color>
+
+    <color name="tab_unselected_text_color">#04971a</color>
+    <color name="tab_unselected_color">#04971a</color>
 
     <color name="black_text">#020202</color>
 
@@ -33,4 +37,10 @@
     <color name="bg_layout">#fff2f2f2</color>
     <color name="text_blue">#ff317ae6</color>
     <color name="co_text_nomal_gray">#ff333333</color>
+
+    <color name="color_radio_checked">#0b1697</color>
+    <color name="color_processbar_search">#1dd410</color>
+    <color name="color_txt_search_result_no_data">#b1022b</color>
+
+    <color name="color_footer_swipe">#02b125</color>
 </resources>

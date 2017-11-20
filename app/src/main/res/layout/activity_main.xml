@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:fitsSystemWindows="true"
-    >
+    android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,18 +19,32 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/tabs_main" />
 
+        <!--app:tabMode="scrollable"-->
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs_main"
             app:tabTextAppearance="@style/MyCustomTextAppearance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:tabTextColor="@color/tab_unselected_text_color"
-            app:tabSelectedTextColor="@color/tab_selected_text_color"
             android:background="@drawable/tab_background"
-            android:minHeight="?attr/actionBarSize"/>
+            android:minHeight="?attr/actionBarSize">
+            <!--using in xml -->
+            <!--<android.support.design.widget.TabItem-->
+                <!--android:layout="@layout/tab"-->
+                <!--android:text="Tab 1"-->
+                <!--android:icon="@drawable/ic_launcher" />-->
+        </android.support.design.widget.TabLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnFloat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="auto"
+            app:layout_anchorGravity="bottom|center"
+            android:layout_margin="5dp"
+            android:layout_above="@+id/tabs_main"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_float_search"
+            />
     </RelativeLayout>
-
-
 
 </LinearLayout>

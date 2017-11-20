@@ -65,4 +65,22 @@
         <item name="android:scrollbarFadeDuration">800</item>
         <item name="android:scrollbarDefaultDelayBeforeFade">500</item>
     </style>
+
+    <!--Radio Button style-->
+    <style name="MyRadioButton">
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/radio_text_mode</item>
+        <item name="android:background">@drawable/radio_background_mode</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MyRadioButtonLeft" parent="MyRadioButton">
+        <item name="android:background">@drawable/radio_background_mode_left</item>
+    </style>
+
+    <style name="MyRadioButtonRight" parent="MyRadioButton">  /
+        <item name="android:background">@drawable/radio_background_mode_right</item>
+    </style>
+
 </resources>
