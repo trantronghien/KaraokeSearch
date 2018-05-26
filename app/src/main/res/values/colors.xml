@@ -1,28 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#04971c</color>
-    <color name="hong">#f7216a</color>
-    <color name="color_primary">#009F9F</color>
-    <color name="color_primary_dark">#00796B</color>
-    <color name="color_primary_light">#4DB6AC</color>
-    <color name="color_accent">#FBC02D</color>
-    <color name="color_primary_text">#212121</color>
-    <color name="color_secondary_text">#727272</color>
-    <color name="icons">#FFFFFF</color>
-    <color name="color_divider">#B6B6B6</color>
-    <color name="cyan_dark">#00BCD4</color>
-    <color name="white">@android:color/white</color>
-    <color name="black">@android:color/black</color>
-    <color name="teal_200">#80CBC4</color>
-    <color name="grey">#E0E0E0</color>
-    <color name="Tenbaihat">#0616ed</color>
-    <color name="LoiBaiHat">#0b0d0d</color>
-    <color name="Yesloww">#f5f109</color>
-    <color name="Red">#fa0511</color>
-    <color name="XANHLA">#02890b</color>
-    <color name="XANHDUONG">#031fd6</color>
-    <color name="XamLam">#92f1ec</color>
-    <color name="mabaihat">#f2030b</color>
+    <color name="tabMedium">#2B2B2B</color>
+    <color name="tabDark">#000000</color>
+    <color name="tabTransparent">#10ffffff</color>
+
+    <color name="theme_color_primary">#1c9359</color>
+    <color name="theme_color_primary_light">#3aaf75</color>
+    <color name="theme_color_accent">#084e43</color>
+
+    <color name="tab_border">#a7a7aa</color>
+    <color name="tab_background">#f6f6f7</color>
+
+    <color name="tab_selected_text_color">#f54e06</color>
+    <color name="tab_selected_color">#f54e06</color>
+
+    <color name="tab_unselected_text_color">#04971a</color>
+    <color name="tab_unselected_color">#04971a</color>
+
+    <color name="black_text">#020202</color>
+
+    <!--search-->
+    <color name="colorGray">#CCC</color>
+    <color name="colorWhite">#fff</color>
+
+    <!--item Recycle Song -->
+    <color name="song_code">#1d5dff</color>
+    <color name="song_name">#050101</color>
+    <color name="author">#898686</color>
+    <color name="lyrics">#060505</color>
+
+    <!---->
+    <color name="colorAccent">#3502df</color>
+    <color name="bg_line">#29a7f1</color>
+    <color name="snackbar_green">#00bf10</color>
+    <!---->
+    <color name="bg_layout">#fff2f2f2</color>
+    <color name="text_blue">#ff317ae6</color>
+    <color name="co_text_nomal_gray">#ff333333</color>
+
+    <color name="color_radio_checked">#0b1697</color>
+    <color name="color_processbar_search">#1dd410</color>
+    <color name="color_txt_search_result_no_data">#b1022b</color>
+
+    <color name="color_footer_swipe">#02b125</color>
 </resources>

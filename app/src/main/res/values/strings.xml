@@ -1,17 +1,44 @@
 <resources>
-    <string name="app_name">Karaoke Search</string>
-    <string name="action_settings">Settings</string>
-    <string name="textupdate">Bạn Nhấn Để Cập Nhập Vol Mới </string>
-    <string name="text_help">Bạn có thể Tìm kiếm bằng chữ không dấu , chữ cái đầu của bài hát  </string>
-    <string name="Gioithieu">Bạn có thể tìm kiếm bằng chữ thường hoặc chữ hoa không dấu</string>
-    <style name="Tab">
-        <item name="android:textColor">#e7a3a3</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:textSize">10sp</item>
-        <item name="android:shadowColor">#000000</item>
-        <item name="android:shadowDx">1</item>
-        <item name="android:shadowDy">1</item>
-        <item name="android:shadowRadius">2</item>
-    </style>
+    <string name="app_name">KaraokeSearch</string>
+
+    <string name="hint_search_text">Tìm kiếm bài hát ...</string>
+    <string name="noffication_Voice_devices">Oh ! No thiết bị của bạn không hỗ trợ google voice</string>
+    <string name="title_vol_dialog">Chọn Vol/List bài hát</string>
+
+    <!--Title dialog-->
+    <string name="title_dialog_table_song">Chọn Đầu Karaoke</string>
+    <string name="title_dialog_vol_song">Chọn Vol/List bài hát</string>
+    <string name="title_dialog_alphabet_song">Chữ cái</string>
+    <string name="snackbar_text">Nhấn back 2 lần để thoát </string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
+    <string name="check_favorite">Bạn đã thêm <font color="#FFFF00"> %1$s </font> vào danh sách yêu thích</string>
+    <string name="uncheck_favorite">Bạn đã loại bỏ <font color="#FFFF00"> %1$s </font> khỏi danh sách yêu thích</string>
+
+    <string name="text_detail_watch_video">Hát Karaoke online</string>
+    <string name="text_detail_share">Chia sẻ với bạn bè</string>
+    <string name="songlyric">Lời bài hát</string>
+    <string name="text_song_suggest">Bài liên quan</string>
+
+    <!--Welcome Activity-->
+    <string name="process_copy_database">Xin chờ khởi tạo cho lần chạy đầu tiên ...</string>
+
+
+    <string name="table_song_arirang">Arirang</string>
+    <string name="table_song_music">Music Core</string>
+    <string name="table_song_california">California</string>
+    <string name="table_song_vietktv">VietKTV</string>
+    <string name="search_help">Bạn muốn tìm kiếm bài hát một cách nhanh chóng và hiệu quả  bạn chỉ cần search với từ khóa viết tắt,
+        hoặc tên ca sĩ viết tắt, hay bài hát viết tắt ...
+    </string>
+    <string name="title_tab_one">Tra mã</string>
+    <string name="title_tab_two">Danh mục</string>
+    <string name="title_tab_three">Yêu thích</string>
+    <string name="title_tab_four">Cập nhật</string>
+    <string name="title_tab_five">Tìm kiếm online</string>
+    <string name="error_search_E100">đã có lỗi xảy ra trong quá trình tìm kiếm, hay liên hệ với QC</string>
+    <string name="search_result_no_data">Không tìm thấy dữ liệu nào phù hợp</string>
+    <string name="title_footer_swipe_refresh">Đợi xíu nhé ...</string>
+    <string name="no_input">Bạn vẫn chưa nhập gì</string>
+
 </resources>
